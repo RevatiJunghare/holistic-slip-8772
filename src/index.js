@@ -130,3 +130,5 @@ document.querySelector(".right_arr_div").addEventListener("click",()=>{
     
 })
 
+
+
