@@ -1,4 +1,4 @@
-const url = "http://localhost:5050/skincare_products"
+let api = "http://localhost:5050/skincare_products"
 
 window.onload = ()=>{
   let form = document.getElementById("product_form")
@@ -6,38 +6,6 @@ window.onload = ()=>{
       addProduct(event)
   }
 }
-
-let getdata = async ()=>{
-  let res = await fetch(url)
-  let data = await res.json()
-  console.log(data)
-  renderDOM(data)
-}
-getdata()
-
-
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
-  
-  // Close the dropdown if the user clicks outside of it
-  window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  }
-
-
-  
-
-  
 
 
 let addProduct = async (e)=>{
@@ -50,7 +18,7 @@ let addProduct = async (e)=>{
   
 
   let user_data = {
-      id : Date.now() + name,
+      id : Date.now(),
       name,
       image,
       price,
@@ -58,7 +26,7 @@ let addProduct = async (e)=>{
   }
   console.log(user_data)
 
-  let res = await fetch(url,{
+  let res = await fetch(api,{
       method:"POST",
       body:JSON.stringify(user_data),
       headers:{
@@ -69,29 +37,39 @@ let addProduct = async (e)=>{
 addProduct()
 
 
+let getdata = async ()=>{
+  let res = await fetch(api)
+  let data = await res.json()
+  console.log(data)
+  renderDOM(data)
+}
+getdata()
+
+
 let renderDOM = (data)=>{
   let container = document.getElementById("container")
     container.innerHTML=null
-    data.forEach((el,id)=>{
+    data.forEach(({image,name,price,rating,id})=>{
         let div=document.createElement("div")
         div.setAttribute("class","box")
         let img=document.createElement("img")
-        img.src=el.image
+        img.src=image
 
-        let name=document.createElement("p")
-        name.innerText=el.name
+        let nam=document.createElement("p")
+        nam.innerText=name
 
-        let price=document.createElement("p")
-        price.innerText=el.price
+        let pric=document.createElement("p")
+        pric.innerText=price
 
-        let rating=document.createElement("p")
-        rating.innerText=el.rating
+        let ratinge=document.createElement("p")
+        ratinge.innerText=rating
         
         let rmoveBtn = document.createElement("button")
         rmoveBtn.innerText="Remove"
         rmoveBtn.setAttribute("class","remove_item")
         rmoveBtn.onclick = ()=>{
         removeProduct(id)
+        //console.log(id)
       }
 
         let priceupdateBtn = document.createElement("button")
@@ -101,7 +79,7 @@ let renderDOM = (data)=>{
         updateProduct(id)
       }
 
-       div.append(img,name,price,rating,rmoveBtn,priceupdateBtn)
+       div.append(img,nam,pric,ratinge,rmoveBtn,priceupdateBtn)
         container.append(div)
     })
 }
@@ -109,10 +87,26 @@ let renderDOM = (data)=>{
 
 
 let removeProduct = async(id)=>{
-  let res = await fetch(`http://localhost:5050/skincare_products/${id}`,{
+  let res = await fetch(`${api}/${id}`,{
       method : "DELETE"
   })
+  
   getdata()
+}
+
+let updateProduct =async (id)=>{
+  const new_price = window.prompt("Enter new Price")
+  let data = {price:new_price}
+
+  let res = await fetch(`${api}/${id}`,{
+      method : "PATCH",
+      body : JSON.stringify(data),
+      headers:{
+          "Content-Type" : "application/json"
+      }
+  });
+  getdata()
+  
 }
 
 
@@ -130,23 +124,30 @@ sortHtoL.onclick = async ()=>{
   let res = await fetch(`http://localhost:5050/skincare_products?_sort=price&_order=asc`)
   let data = await res.json()
   renderDOM(data)
+  console.log(data)
 }
 
 
-let updateProduct =async (id)=>{
-  const new_price = window.prompt("Enter new Price")
-  let data = {price:new_price}
 
-  let res = await fetch(`${url}/${id}`,{
-      method : "PATCH",
-      body : JSON.stringify(data),
-      headers:{
-          "Content-Type" : "application/json"
+
+
+
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
       }
-  });
-  getdata()
+    }
+  }
 }
-
-
-
 
