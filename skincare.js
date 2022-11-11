@@ -96,7 +96,9 @@ let removeProduct = async(id)=>{
 
 let updateProduct =async (id)=>{
   const new_price = window.prompt("Enter new Price")
-  let data = {price:new_price}
+  const new_rating = window.prompt("Enter new Rating")
+  const new_image = window.prompt("Enter new image url")
+  let data = {price:new_price , rating:new_rating, image:new_image}
 
   let res = await fetch(`${api}/${id}`,{
       method : "PATCH",
