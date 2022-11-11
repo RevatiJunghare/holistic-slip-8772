@@ -195,7 +195,7 @@ let videoPlay = (data) => {
     video.style.border = "0";
     video.className = "videoshorts";
     video.style.cursor = "pointer";
-     console.log(video)
+    //  console.log(video)
     vid_div.append(video);
   });
 };
