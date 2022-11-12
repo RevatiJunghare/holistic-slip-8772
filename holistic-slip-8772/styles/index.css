@@ -1,0 +1,536 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:'poppins', sans_serif;
+    width:100vw;
+    background-color: #f2f2f2 ;
+    /* width: 100%; */
+    font-size: 18px;
+    /* font-weight: bolder; */
+}
+
+#carousel {
+    text-align: center;
+    /* padding-top: 2%; */
+    margin-top: -4%;
+    padding-bottom: 2%;
+    
+}
+#carousel img{
+    width:100%
+}
+
+.text_tag {
+
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: auto;
+    margin-top: 8px;
+    background-color: #1f1f1f;
+    color: aliceblue;
+
+}
+
+
+
+
+.fourth_box_slide_div {
+    display: flex;
+    width: 100%;
+    height: 570px;
+    cursor: pointer;
+    margin: auto;
+    justify-content: space-evenly;
+    background-image:url("https://media.sugarcosmetics.com/upload/homePageBackGroundTexture.jpg") ;
+     
+
+}
+
+.fourth_box_slide_div p {
+text-align: center;
+}
+
+.pro_name{
+    text-align: center;
+    font-weight: bolder;
+}
+.fourth_box{
+    background-color: #6610f2,  #0d6efd;;
+}
+
+
+
+
+.fourth_box_slide_div:hover .left,
+.right {
+    visibility: visible;
+}
+
+.fourth_box_slide_div:hover .right {
+    visibility: visible;
+}
+
+.best_seller_products {
+
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-top: 25px;
+    
+
+    /* background-color:white; */
+
+}
+/* .best_seller_products div{
+    /* background-color: white; */
+     /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;
+}  */
+
+
+.four_pro_div img{
+    border-radius: 10px;
+}
+.four_pro_div {
+    width: 21%;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    background-color: #fff;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 80%;
+    align-items: center;
+    /* border:1px solid red; */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.four_pro_div:hover {
+    visibility: visible;
+}
+
+.four_pro_div_{
+    width: 20%;
+    border: 0px solid red;
+    height:60%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 20px;
+   /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; ; */
+}
+
+
+.sixteenth_box_div {
+    margin-left: 60px;
+    border-radius: 10px;
+}
+
+.sixteenth_box_div img {
+    width: 285px;
+    height: 195px;
+    cursor: pointer;
+    margin-right: 29px;
+    margin: auto;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+
+.seventh_box>img {
+    width: 90%;
+    height: 308px;
+    cursor: pointer;
+    margin: auto;
+    margin-left: 60px;
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+.sixteenth_box_div1 {
+    margin-left: 40px;
+    border-radius: 10px;
+}
+
+.sixteenth_box_div1 img {
+    width: 460px;
+    height: 320px;
+    cursor: pointer;
+    margin-right: 29px;
+    margin: auto;
+    padding-left: 15px;
+    border-radius: 33px;
+}
+
+
+.ninth_box_slide_div,
+.eleventh_box_slide_div,
+.thirteenth_box_slide_div,
+.fifteenth_box_slide_div {
+    display: flex;
+    width: 95%;
+    height: 360px;
+    cursor: pointer;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+
+.ninth_box {
+    display: flex;
+    width: 80%;
+    height: 349px;
+    cursor: pointer;
+    margin: auto;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    margin-bottom: 250px;
+    text-align: center;
+  
+  
+    
+}
+ 
+
+.ninth_box img {
+    display: block;
+
+    height: 300px;
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+
+
+.eighth_box{
+    margin-top: 200px;
+  border:1 px solid red  ;
+  /* width: 663px; */
+}
+
+.eighth_box_video_div{
+     width: 463px;
+    height: 400px;
+    margin: auto;
+    position: relative;
+    /* overflow: visible; */
+    
+    margin-left: 20px;
+}
+.vidSlider{
+    /* overflow: visible; */
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 1263px;
+        margin: auto;
+}
+.videoshorts{
+    height: 100%;
+        width: 240px;
+        /* overflow: visible; */
+        border-radius: 20px;
+        margin-right: 10px;
+    
+}
+
+
+.controls{
+
+
+    position: absolute;
+    width: 1450px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 30px;
+    visibility: visible;
+
+}
+.Lcont,.Rcont{
+    height: 40px;
+    width: 40px;
+   
+}
+
+
+.eighth_box:hover .controls{
+    /* visibility: visible;  */
+    cursor: pointer; 
+}
+
+.third_box{
+    border:0px solid red;
+    height: 400px;
+    margin-bottom: 250px;
+}
+
+#sugarhai img {
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 30px;
+    /* margin-left: -1233px; */
+    width:1415px;
+    /* margin-right: -50px; */
+    margin-bottom: 50px;
+}
+
+#sugarhai  p{
+    font-size: 20px;
+}
+
+.ninth_box_slide_div,
+.eleventh_box_slide_div,
+.thirteenth_box_slide_div,
+.fifteenth_box_slide_div {
+    display: flex;
+    width: 95%;
+    height: 360px;
+    cursor: pointer;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+
+.second_box_img>img{
+    width: 95%;
+    height: 452px;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    /* margin-bottom: 200px; */
+
+}
+
+
+
+.nineth_box {
+    display: flex;
+    width: 100%;
+    height: 549px;
+    cursor: pointer;
+    margin: auto;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    border-radius: 10px;
+    /* padding: 35px; */
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+  background-image: url(https://media.sugarcosmetics.com/upload/VTOBackgroungTexture.png)
+  
+    
+}
+ .four_pro_div_
+{
+   background-color: #fff;
+   border: 0px solid red; 
+   height: 90%;
+   margin-top: 25px;
+   border-radius: 10px;
+   margin-bottom: 50px;
+   
+} 
+.four_pro_diva
+{
+   background-color: #fff;
+   border: 0px solid red; 
+   height: 90%;
+   margin-top: 25px;
+   border-radius: 10px;
+   margin-bottom: 50px;
+   width:22%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   
+} 
+
+.four_pro_divaa
+{
+   background-color: #fff;
+   border: 0px solid red; 
+   height: 140%;
+   margin-top: 25px;
+   border-radius: 10px;
+   margin-bottom: 50px;
+   width:22%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   
+} 
+
+
+.nineth_box img {
+    display: block;
+
+    height: 300px;
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#carousel2 img {
+    width: 98%;
+    height: 352px;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
+
+.twelth_box_div {
+    margin-left: 60px;
+    width: 1700px;
+    gap: 40px;
+    
+
+}
+
+.twelth_box_div img {
+    height: 400px;
+    width: 705px;
+    /* box-sizing: border-box; */
+    cursor: pointer;
+}
+
+.twelth_box_div img {
+    border-radius: 10px;
+}
+
+.ninthe_box {
+    display: flex;
+    width: 90%;
+    height: 509px;
+    cursor: pointer;
+    margin: auto;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    border-radius: 10px;
+    /* padding: 35px; */
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+  /* background-image: url(https://media.sugarcosmetics.com/upload/VTOBackgroungTexture.png) */
+  
+    
+}
+
+
+ .four_pro_div_
+{
+   background-color: #fff;
+   border: 0px solid red; 
+   height: 90%;
+   margin-top: 25px;
+   border-radius: 10px;
+   margin-bottom: 50px;
+   
+} 
+.four_pro_diva
+{
+   background-color: #fff;
+   border: 0px solid red; 
+   height: 96%;
+   margin-top: 25px;
+   border-radius: 10px;
+   margin-bottom: 50px;
+   width:21%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   
+} 
+
+.ninthe_box img {
+    display: block;
+
+    height: 300px;
+    width: 80%;
+    margin: auto;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.explore{
+    width: 1450px;
+    border:0px solid red;
+    margin-left: 55px;
+}
+
+.explore_div {
+    /* margin-left: 30px; */
+    border-radius: 10px;
+    border:0px solid black;
+    width: 1450px;
+    display: flex;
+}
+
+.explore_div img {
+    width:362px;
+    height: 195px;
+    cursor: pointer;
+    margin-left: 29px;
+    margin: auto;
+    padding-left: 10px;
+    border-radius: 20px;
+}
+
+
+
+.read_more {
+    margin: auto;
+    /* text-align: center; */
+    /* margin-left: 100px; */
+}
+
+#one{
+    font-weight: bold;
+}
+
+#bottom2-heding{
+    /* border: 1px solid; */
+    padding: 18px;
+    background-color: #fff;
+    padding-left: 50px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+#bottom2{
+    margin-top: 30px;
+    border: px solid;
+    text-align: center;
+    line-height: 30px;
+}
+
+#email2{
+    width: 40%;
+    font-size: 16px;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    outline: none;
+    border: 1px solid;
+}
+
+#bottom2>button{
+    width: 8%;
+    font-size: 16px;
+    padding: 9px;
+    margin-left: -5px;
+    color: #fff;
+    background-color: black;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius:10px ;
+    cursor: pointer;
+}
