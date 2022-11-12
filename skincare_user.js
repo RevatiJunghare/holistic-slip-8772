@@ -1,4 +1,6 @@
-let SkinCareData = [
+let obj_data=[
+
+    
     {
         image_link:
             "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-aquaholic-water-boost-mask-13548848087123.jpg?v=1619115321",
@@ -154,175 +156,243 @@ let SkinCareData = [
 ];
 
 
-localStorage.setItem("cart", JSON.stringify(SkinCareData));
+
+localStorage.setItem("RelevanceData",JSON.stringify(obj_data));
+let Relevance=JSON.parse(localStorage.getItem("RelevanceData"));
+
+
+//jquery for toggle sub_menu
+$(document).ready(function(){
+$('.sub-btn').click(function(){
+    // console.log("hiii")
+    $(this).next('.sub_menu').slideToggle();
+    $(this).find('.dropdown').toggleClass('rotate');
+});
+})
+
+
+
 
 function append(data){
-   data.forEach(function(el){
-    let box = document.createElement("div");
-    box.setAttribute("id","p-div");
+const right_side=document.getElementById('right_side');
+right_side.innerHTML=null;
 
-    let top = document.createElement("div");
-    let bottom = document.createElement("div");
-    let rating_wrapper = document.createElement("div");
-    let price_wrapper = document.createElement("div");
+data.forEach((el)=>{
+const div=document.createElement("div");
+div.setAttribute("id","p-div");
 
-    let shade = document.createElement("p");
-    shade.textContent = el.shade;
+const div2=document.createElement("div");
+div2.setAttribute("class","star-main-div");
 
-    let img_shade = document.createElement("img");
-    img_shade.src = el.shade_image;
+const div3=document.createElement("div");
+div3.setAttribute("class","star-div");
+div3.innerHTML = '<i class="fa-regular fa-heart 2fa"></i>';
 
-    let img = document.createElement("img");
-    img.src = el.image_link;
-    img.classList.add("main-img");
+const img=document.createElement('img');
+img.src=el.image_link;
 
-    let name = document.createElement("p");
-    name.textContent = el.name;
+const Name=document.createElement("p");
+Name.innerText=el.name;
 
-    let price = document.createElement("span");
-    price.innerText = "Rs." + el.price;
+const Price=document.createElement("h4");
+Price.innerText=" ₹ "+ el.price;
 
-    let strike = document.createElement("s");
-    strike.innerText = el.strike;
-
-    let rating = document.createElement("span");
-    rating.innerText = el.rating;
-
-    let star_icon = document.createElement("span");
-    star_icon.innerHTML += '<i class="fa fa-star" aria-hidden="true"></i>'
-
-    let heart_icon = document.createElement("span");
-    heart_icon.innerHTML += '<i class="fa-regular fa-heart"></i>'
-    
-    heart_icon.addEventListener("click", function () {
-        wishList(el);
-    });
-
-    name.classList.add("name");
-    box.classList.add("box");
-    top.classList.add("top");
-    bottom.classList.add("bottom-block");
-    rating_wrapper.classList.add("rating-wrapper");
-    price_wrapper.classList.add("price-wrapper");
-
-    var btn = document.createElement("button");
-    btn.innerText = "ADD TO CART";
-    btn.addEventListener("click", function () {
-        addToCart(el);
-    });
-    
-    box.addEventListener("click",()=>{
-        ProductPage(el);
-        window.location.href = "product.html"
-    })
-
-
-    top.append(shade, img_shade);
-    price_wrapper.append(strike, price)
-    rating_wrapper.append(star_icon, rating);
-    bottom.append(heart_icon, btn);
-    box.append(img, name, price_wrapper, rating_wrapper, bottom);
-
-    document.querySelector("#right_side").append(box);
-   })
+const Rating=document.createElement("h4");
+Rating.style.color="gold";
+if(el.rating==null){
+    Rating.innerText=" ★ " + "0.0";
+}
+else{
+    Rating.innerText=" ★ "+el.rating;
 }
 
-append(SkinCareData)
+const btn=document.createElement("button")
+btn.innerHTML="Add To Cart";
+btn.addEventListener("click",()=>{
+    addtocart(el); 
+})
 
 
+ div2.append(div3,btn);
+div.append(img,Name,Price,Rating,div2);
+right_side.append(div);
+})
+}
 
+append(obj_data);
 
- 
-var cartArray= JSON.parse(localStorage.getItem("cartItem")) || [];
- function addToCart(el){
-    cartArray.push(el);
-    alert("item added to cart")
+let cartdata=JSON.parse(localStorage.getItem("CartList")) || [];
+function addtocart(el){
+cartdata.push(el);
+localStorage.setItem("CartList",JSON.stringify(cartdata));
+}
 
-    localStorage.setItem("cartItem",JSON.stringify(cartArray))
- }
-
- var cartwish= JSON.parse(localStorage.getItem("wishlistItem")) || [];
- function wishList(el){
-    cartwish.push(el);
-    alert("item added to wishlist")
-
-    localStorage.setItem("wishlistItem",JSON.stringify(cartwish))
- }
-
-
- 
- function ProductPage(el){
-    localStorage.setItem("ProductPage",JSON.stringify(el))
+//Relevance data 
+let relevance_p=document.getElementById('sub-item1');
+relevance_p.addEventListener("click", ()=>{
+starting();
+});
+const starting=async()=>{
+append(Relevance);
 }
 
 
 
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
-  
-  // Close the dropdown if the user clicks outside of it
-  window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  }
+//sort high to low
+let hightolow_p=document.getElementById('sub-item2');
+hightolow_p.addEventListener("click", ()=>{
+    hlrating();
+});
+const hlrating=()=>{
+    // console.log("HL");
+ let sortdata= obj_data.sort(function(a,b){
+     return b.price - a.price;
+   });
+ append(sortdata);
+}
 
 
-
-
-
-  let hightolow_p=document.getElementById('sub-item2');
-  hightolow_p.addEventListener("click", ()=>{
-      hlrating(data);
-  });
-  const hlrating=(data)=>{
-   let sortdata= data.sort(function(a,b){
-      // console.log(typeof (b.price));
-       return b.price - a.price
-     });
-   append(sortdata);
- }
-
-
- //sort low to high
+//sort low to high
 let lowtohigh_p=document.getElementById('sub-item3');
 lowtohigh_p.addEventListener("click", ()=>{
-lhrating(data)
+lhrating()
 });
-const lhrating=(data)=>{
-let sortdata= data.sort(function(a,b){
+const lhrating=()=>{
+// console.log("LH");
+let sortdata = obj_data.sort(function(a,b){
     return a.price - b.price ;
   });
 append(sortdata);
 }
 
+//   -------------------------------
 
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
+let filter_1=document.getElementById('Filter-type1');
+filter_1.addEventListener("click", ()=>{
+Filter_1()
+});
+const Filter_1=()=>{
+let  data_Filter_1=[
+{
+    image_link:
+        "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-cheat-sheet-clarifying-mask-12775754203219.jpg?v=1619113702",
+    name: "Cheat Sheet Clarifying Mask",
+    price: 99,
+    rating: "4.9(121)",
+    strike: '',
+}, 
+
+{
+    image_link:
+        "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-charcoal-patrol-bubble-mask-12775750500435.jpg?v=1644399394",
+    name: "Charcoal Patrol Bubble Mask",
+    price: 149,
+    rating: "4.9(41)",
+    strike: '',
+},
+
+{
+    image_link:
+        "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-cheat-sheet-anti-aging-mask-12775753744467.jpg?v=1619113715",
+    name: "Cheat Sheet Anti-Aging Mask",
+    price: 99,
+    rating: "4.8(142)",
+    strike: '',
+},
+]
+//console.log("data_Filter_1:",data_Filter_1);
+append(data_Filter_1);
+}
+
+
+let filter_2=document.getElementById('Filter-type2');
+filter_2.addEventListener("click", ()=>{
+Filter_2()
+});
+const Filter_2=()=>{
+let  data_Filter_2=[
+{
+    image_link:
+        "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-swipe-right-cleansing-water-12771592732755.jpg?v=1619106450",
+    name: "Swipe Right Cleansing Water",
+    price: 399,
+    rating: "4.9(197)",
+    strike: '',
+},
+]
+append(data_Filter_2);
+}
+
+
+let filter_3=document.getElementById('Filter-type3');
+filter_3.addEventListener("click", ()=>{
+Filter_3()
+});
+const Filter_3=()=>{
+let  data_Filter_3=[
+       
+{
+    image_link:"https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-cheat-sheet-clarifying-mask-pack-of-6-12784634527827.jpg?v=1619114589",
+     name:   "Cheat Sheet Clarifying Mask (Pack of 6)",
+    price: 399,
+    rating: "4.8(27)",
+    strike: '',
+}, 
+
+{
+    image_link:
+        "https://cdn.shopify.com/s/files/1/0906/2558/products/Hydrating-Primer-3.jpg?v=1626423647",
+    name: "Aquaholic Hydrating Primer",
+    price: 999,
+    rating: "4.5(421)",
+    strike: 'RS.1199',
+},
+
+{
+    image_link:
+        "https://cdn.shopify.com/s/files/1/0906/2558/products/moisturiser.jpg?v=1626968292",
+    name: "Aquaholic Priming Moisturizer",
+    price: 799,
+    rating: "4.8(421)",
+    strike: 'RS.999',
+},
+
+{
+    image_link:
+        "https://cdn.shopify.com/s/files/1/0906/2558/products/373532210-artboard-1.jpg?v=1646149967",
+    name: "Citrus Got Real Retinol Brightening Serum",
+    price: 1499,
+    rating: "4.5(421)",
+    strike: 'RS.1799',
+},
+
+]
+append(data_Filter_3);
+}
+
+
+let filter_4=document.getElementById('Filter-type4');
+filter_4.addEventListener("click", ()=>{
+Filter_4()
+});
+const Filter_4=()=>{
+let  data_Filter_4=[
+{
+    image_link:
+        "https://cdn.shopify.com/s/files/1/0906/2558/products/Aquaholic-Pore-Exfoliating-Scrub-3_1.jpg?v=1626363966",
+    name: "Aquaholic Pore Exfoliating Scrub",
+    price: 399,
+    rating: "4.9(14)",
+    strike: '',
+}, 
+
+]
+append(data_Filter_4);
+}
+
+
+
   
-  // Close the dropdown if the user clicks outside of it
-  window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  }
-
 
 
 
