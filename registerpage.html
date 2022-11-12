@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="registerp.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Nunito:ital,wght@0,300;0,400;1,300;1,400&family=Plus+Jakarta+Sans:wght@400;600&family=Poppins:wght@200;300;400;500&family=Quicksand&family=Ubuntu:wght@500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div id="mainrpg" style="display: block;">
+        <div id="subrpg">
+            <div id="crsri" onclick="cls_fun()">
+                <a href="./index.html"><i class="fa-solid fa-xmark"></i></a>
+            </div>
+            <a href="https://www.pngpix.com/wp-content/uploads/2016/10/PNGPIX-COM-Arrow-PNG-Image-4.png"></a>
+            <div id="regrpg">
+                <div class="regtop">
+                  
+                </div>
+                <form action="./myaction.js" name="myForm" onsubmit="return validateform()" method="post">
+                    <div id="inf_input">
+                        <h2>Please fill this form below</h2>
+                        <div class="inf_name" id="First_Name">
+                            <input type="text" maxlength="9" placeholder="First Name" class="form_err" required>
+                        </div>
+                        <div class="inf_name" id="Middle_Name">
+                            <input type="text" maxlength="9" placeholder="Last Name" class="form_err" required>
+                        </div>
+                        <div id="inf_email" id="Middle_Name">
+                            <input type="email" placeholder="Enter email id *">
+                        </div>
+                    </div>
+                    <div id="button_ris" style="margin-bottom: 0%;" onclick="signUp ()">SIGN UP ME</div>
+                    <div id="orr"><h3 style="margin-left: 45%;">OR</h3></div>
+                    <div id="ricon">
+                        <div class="cwg">
+                            <a href="#" class="email_lgn"> 
+                                <img src="https://media.sugarcosmetics.com/upload/Frame%20892.png" width="158px"
+                                    height="40px"></a>
+                        </div>
+                    </div>
+                    <div class="hline"> <hr></div>
+                   
+                    <div id="rjtrm">
+                        <small class="small" style="margin-left: 20%; margin-bottom: 30%;">By Signing up or logging in, you agree to our   <a href="#">Terms and
+                                Conditions</small></a>
+                    </div>
+                    </div>
+                </form>
+            
+        </div>
+        <div id="box" style="display: none" ;>
+            <h1> Hi Congratulation, Your Account is created successful <button class="ok" onclick="okay ()">Ok</button>
+            </h1>
+        </div>
+</body>
+<script src="./src/registerp.js"></script>
+
+</html>
