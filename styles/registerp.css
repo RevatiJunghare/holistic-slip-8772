@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+  }
+  body{
+    background-color: black;
+  }
+  #mainrpg {
+    display: none;
+    position: relative;
+    width: fit-content;
+    animation: right 1s;
+  }
+  #subrpg {
+    /* background-image: url("https://media.sugarcosmetics.com/upload/authSIe2.jpg"); */
+    height:92vh;
+    width: 40%;
+    background-position: 100%;
+    background-size: cover;
+  }
+  #subrpg img{
+    width:80%;
+    /* height: 80%; */
+    /* border-radius: 50%; */
+    margin-top: 120px;
+    margin-left: 30px;
+  
+  }
+  #crsri {
+    margin-left: 1500px;
+    font-size: large;
+    color: white;
+    cursor: pointer;
+  }
+  #crsri>a{
+    color: white;
+  }
+  
+  #regrpg {
+    width: 930px;
+    height: 705px;
+    margin-left: 600px;
+    margin-top: -670px;
+    background-image: url("https://media.sugarcosmetics.com/upload/loginPageBackGroundTexture.png");
+  }
+  .regtop {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-left: 30px;
+  }
+ 
+  #ricon {
+    display: flex;
+    gap: 5px;
+    margin-left: 35%;
+    margin-top: 20px;
+  }
+ 
+ 
+  #inf_input {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 28px;
+    padding: 30px;
+    padding-left: 30%;
+    margin-top: 80px;
+    font-size: 12px;
+  }
+  #inf_input>h2{
+    margin-left: 54px;
+    font-size:x-small;
+  }
+  .inf_name {
+    margin-left: 30px;
+    height: 30px;
+    width: 190px;
+  }
+  .inf_name input {
+    border: none;
+    background-color: #f5f5f5;
+    width: 100%;
+    height: 100%;
+  }
+  .inf_name {
+    margin-left: 30px;
+    height: 30px;
+    width: 180px;
+  }
+  .inf_name input {
+    padding: 21px;
+    border: none;
+    background-color: #f5f5f5;
+    width: 150%;
+    height: 100%;
+  }
+  #inf_email {
+    margin-left: 30px;
+    height: 35px;
+    width: 180px;
+   
+  }
+  #inf_email input {
+    padding: 21px;
+    border: none;
+    width: 150%;
+    height: 100%;
+    background-color: #f5f5f5;
+  }
+  #button_ris {
+    cursor: pointer;
+    margin-left: 41%;
+    height: 35px;
+    width: 115px;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: small;
+  }
+  #orr>h3{
+    margin-top: 20px;
+  }
+ .cwg>a{
+ 
+  margin-left: 30px;
+ }
+  
+ .hline{
+  margin-top: 100px;
+ }
+
+  .small>a{
+    color: red;
+    font-size: smaller;
+    text-decoration: none;
+  }

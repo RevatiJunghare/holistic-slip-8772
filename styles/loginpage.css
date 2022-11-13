@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+  }
+    body{
+      background-color: rgb(9, 4, 4);
+       width: fit-content;
+      animation: right 2s;
+     
+    } 
+    
+    .LoginPri {
+      /* background-image: url("images/marceline_logo.jpeg"); */
+      height: 92vh;
+      width: 37%;
+      background-position: 100%;
+      background-size: cover;
+      margin-right: 50%;
+    
+    }
+    .LoginPri img{
+      width:80%;
+      /* height: 80%; */
+      /* border-radius: 50%; */
+      margin-top: 120px;
+      margin-left: 30px;
+    }
+    .closeicon>a {
+      margin-left: 1490px;
+      font-size:large;
+      color: white;
+      background-color: black;
+      cursor: pointer;
+      
+    }
+   
+    #loginmain {
+      width: 966px;
+      height: 90vh;
+      background-image: url("https://media.sugarcosmetics.com/upload/loginPageBackGroundTexture.png");
+      margin-left: 567px;
+      margin-top: -670px;
+    }
+    .upri {
+      padding-top: 20px;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      justify-content: flex-start;
+      gap: 250px;
+      margin-left:35px;
+      color: black;
+    }
+    .arw>a{
+      margin-right: 600px;
+      color: black;
+    }
+    .l_sign {
+      font-size: 24px;
+      margin: 40px 1px 1px 300px;
+    }
+    .l_sign>img{
+      width: 200px;
+     }
+     .l_sign>p{
+      font-size: large;
+      font-weight: 500;
+      line-height: normal;
+     }
+    .logmob {
+      margin-top: 2px;
+    }
+    .logri {
+      margin-left: 30px;
+      width: 565px;
+      height: 45px;
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 20px;
+      align-items: center;
+      margin-left: 250px;
+    }
+    .plusno {
+      font-size: calc(1.275rem + 0.3vw);
+      text-align: center;
+    }
+    
+  
+     .rqst_otp {
+      padding: 5px;
+      border: none;
+      cursor: pointer;
+      background-color: beige;
+      border-radius: 10px;
+    } 
+    
+    .hrline {
+      border: 0.3px solid gray;
+      position: relative;
+      margin-top: 20px;
+      width: 95%;
+      margin-left: 10px;
+    }
+    #asadmin{
+      background-color:grey;
+      margin-top: 10px;
+      border: none;
+      padding: 5px;
+      border-radius: 5px;
+      font-size: large;
+      
+    }
+    #asadmin>a{
+      color:white;
+      text-decoration: none;
+      font-size: small;
+    
+    }
+    
+    #otpsection {
+      margin:20px 1px 1px 1px;
+      text-align: center;
+    }
+    #otpsection>button{
+      padding:1px 10px 1px 10px;
+      border-radius: 10px ;
+      font-size:x-small;
+      font-weight: 400;
+      color: rgb(62,0,0);
+      background-color:rgb(173,172,172);
+    }
+    .enterotp {
+      width: 30px;
+      height: 30px;
+     
+    }
+    #verify {
+      color: #fff;
+      width: 180px;
+      margin-left: -20px;
+      margin-top: 20px;
+      font-size: 14px;
+      border: none;
+      padding: 10px;
+      background-color:grey;
+      cursor: pointer;
+    }
+    #creat_ac {
+      color:  #fff;
+      width: 180px;
+      margin-left: 3px;
+      margin-top: 20px;
+      font-size: 14px;
+      border: none;
+      padding: 10px;
+      background-color:grey;
+      cursor: pointer;
+    }
+    #creat_ac > a{
+      text-decoration: none;
+      color: white;
+    }
+    .get_term{
+      display: flex;
+     margin-left: 220px;
+     font-size:x-small;
+     gap: 5px;
+    }
+    .term>a{
+    color: red;
+    text-decoration: none;
+    }
+    
+   

@@ -1,0 +1,230 @@
+body{
+    background-color: #f2f2f2
+}
+
+.blog_main{
+    margin: 0;
+    padding: 0;
+    min-height: 400px;
+    padding-top: 20px;
+    background-color: #f5f5f5;
+    font-family: 'Quicksand', sans-serif;
+}
+.path-trending{
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    color: #868686;
+    font-size: 18px;
+    height: 30px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    background-color: white;
+    margin-top: -50px;
+}
+.path-trending img{
+    width: 17px;
+}
+.emptyCartDiv{
+    text-align: center;
+    height: 400px;
+}
+.emptyCartDiv img{
+    margin-top: 30px;
+    width: 200px;
+}
+#emptyCartH6{
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #868686;
+}
+.emptyCartDiv button{
+    margin-top: 10px;
+    padding: 10px 55px;
+    background-color: #ec3f78;
+    border: 0;
+    border-radius: 5px;
+}
+.emptyCartDiv button a{
+    font-size: 15px;
+    text-decoration: none;
+    color: #fff;
+}
+
+#blog_main{
+    width: 98%;
+    height: 500px;
+    margin: auto;
+    /* margin: auto;
+    margin-top: 30px;
+    margin-bottom: 10px; */
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+    border-radius: 20px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -133px;
+     /* border: 1px solid black; */
+}
+
+#display{
+  
+    width:65%;
+    /* margin:auto; */
+    margin-bottom: 20px;
+    height: auto;
+    border: 1px dashed rgb(86, 86, 86);
+}
+/* .path-trending{
+    margin-left: 20px;
+    margin-top: 20px;
+    display: block;
+    align-items: center;
+    color: #868686;
+    font-size: 16px;
+} */
+.path-trending img{
+    width: 17px;
+}
+
+.cartOrder_header{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 15px;
+    margin-left: 15px;
+    height:150px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+.cartOrder_header p:last-child{
+    text-decoration: underline;
+}
+.cartOrder{
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 30px;
+    font-weight: bolder;
+}
+.cartOrder_header h2{
+    display: flex;
+    margin-right: -19px;
+}
+
+
+.child{
+    width: 90%;
+    overflow: hidden;
+    /* border: 1px solid black; */
+    display: flex;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+   margin: 10px;
+   height: 25%;
+   border: 1px dashed rgb(237, 82, 108);
+}
+
+.child img{
+    object-fit: cover;
+    width: 70px;
+    height: 100%;
+    border-radius: 3px;
+}
+
+.child_title{
+    margin-top: 20px;
+
+}
+.priceT{
+    margin-top: 20px;
+    margin: auto;
+}
+
+.btn{
+    height: 30%;
+    margin: auto;
+    background-color: #000;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    height: 30px;
+    width: 20%;
+}
+.cartPriceOffer_header{
+    margin-left: 100%;
+    
+}
+
+.child1{
+    width: 40%;
+    overflow: hidden;
+    /* border: 1px solid black; */
+    display: block;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+   margin: auto;
+   height: 50%;
+}
+#details{
+    margin: auto;
+    margin-top: -1px;
+    width: 48%;
+    height: 95%;
+    border: 1px dashed rgb(86, 86, 86);
+}
+
+#hw1{
+    background-color: #000;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    width: 319px;
+    /* margin: auto; */
+    height: 48px;
+    margin-left: 18%;
+    margin-top: 5%;
+    padding: 10px;
+}
+
+#apply{
+    border: 0px solid red;
+    margin-top: 13px;
+    /* margin-right: 70px; */
+    width:100%;
+    height: 50%;
+}
+
+#apply>input{
+    width:390px;
+    height: 40px;
+}
+#apply>button{
+    width:170px;
+    margin-left:20px;
+    height: 40px;
+}
+
+
+#details>h2{
+    margin-left: 20px;
+}
+
+#apply  h1 img{
+    width:5%;
+    height:5%
+}
+
+#f{
+    width:90%;
+    margin: auto;
+    display: flex;
+    height:50px;
+    border-radius: 5px;
+  
+    justify-content: space-between;
+}
+#hr{
+    border:1px dashed grey;
+    /* margin-top: 20px; */
+}
+
+#pr{  border:1px solid grey;}
